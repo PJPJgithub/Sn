@@ -1,0 +1,41 @@
+[앱 소개]
+기획_이유, 다른 앱과의 차이점
+기능_확장성
+데모영상:마지막
+
+확장성 : 기사 핵심 내용 요약(AI), 폰으로 공유(기사 URL, 좋아요 표시한 기사 목록_나중에 읽기),
+UI : 신문지 컨셉, 신문 질감과 색상의 배경, FONT, 클래식한 아이콘
+
+[UML 다이어그램]
+앱 동작 흐름
+
+[코드 리뷰]
+Unit Test
+Instrumented Test
+
+Clean Architecture(전/후 비교)
+- api를 언제 불러오는지
+- 데이터 처리 리스트 목록에 추가 어떤 식으로 처리
+- coroutine flow(news api)
+- ViewModel은 Hilt를 통해 Activity 주입
+- ViewModel은 Model 모듈에 있는 일부 Usecase 클래스
+
+*음성인식 상태 체크, 결과 뷰, 2초 정도 사라짐
+
+'GM' 뉴스 알려 줘
+'다음'
+'계속' 말해 줘_10초 delay
+'이전'
+버튼 클릭(상세 페이지)
+'테슬라' 뉴스 알려 줘
+'내용'
+목록 -> 상세 페이지
+'초기화'
+
+'AI' 뉴스 알려 줘
+목록 -> 상세페이지
+버튼 다음, 이전, 초기화 에러 처리
+'종료'
+
+UI: Display news headline, article image, buttons
+TTS: Read news, button acts, error

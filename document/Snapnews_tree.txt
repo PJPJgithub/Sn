@@ -1,0 +1,78 @@
+[기존]
+Snapnews
+├─app
+│  ├─activity
+│  │      ArticleDetailActivity.kt
+│  │      ArticleListActivity.kt
+│  │      ArticleListAdapter.kt
+│  │      SampleSttActivity.kt
+│  ├─newsapi
+│  │      NewsApiService.kt
+│  │      NewsResponse.kt
+│  ├─viewmodel
+│  │      SampleSttActivityViewModel.kt
+│  │  SampleApplication.kt
+├─data
+│  ├─permission
+│  │      AndroidPermissionDataSource.kt
+│  │      PermissionDataSource.kt
+│  │      PermissionModule.kt
+│  │      RecordPermissionGatewayImpl.kt
+│  ├─stt
+│  │      AndroidSpeechRecognizer.kt
+│  │      SpeechToTextEngine.kt
+│  │      SpeechToTextGatewayImpl.kt
+│  │      SpeechToTextModule.kt
+├─domain
+│  ├─entity
+│  │      PermissionStatus.kt
+│  │      Response.kt
+│  │      SpeechToTextEvent.kt
+│  ├─gateway
+│  │      RecordPermissionGateway.kt
+│  │      SpeechToTextGateway.kt
+│  ├─usecase
+│  │  ├─permission
+│  │  │      GetRecordPermissionUseCase.kt
+│  │  ├─stt
+│  │  │      GetSpeechToTextEventUseCase.kt
+
+[Clean Architecture]
+Snapnews
+├─app
+│  ├─activity
+│  │      ArticleDetailActivity.kt
+│  │      ArticleListActivity.kt
+│  │      MainActivity.kt
+│  ├─adapter
+│  │      ArticleListAdapter.kt(이동)
+│  ├─viewmodel
+│  │      MainActivityViewModel.kt
+│  │  SampleApplication.kt
+├─data
+│  ├─permission
+│  │      AndroidPermissionDataSource.kt
+│  │      PermissionDataSource.kt
+│  │      PermissionModule.kt
+│  │      RecordPermissionGatewayImpl.kt
+│  ├─stt
+│  │      AndroidSpeechRecognizer.kt
+│  │      SpeechToTextEngine.kt
+│  │      SpeechToTextGatewayImpl.kt
+│  │      SpeechToTextModule.kt
+│  ├─news
+│  │      NewsApiService.kt(이동)
+├─domain
+│  ├─entity
+│  │      PermissionStatus.kt
+│  │      Response.kt
+│  │      SpeechToTextEvent.kt
+│  │      NewsResponse.kt(이동)
+│  ├─gateway
+│  │      RecordPermissionGateway.kt
+│  │      SpeechToTextGateway.kt
+│  ├─usecase
+│  │  ├─permission
+│  │  │      GetRecordPermissionUseCase.kt
+│  │  ├─stt
+│  │  │      GetSpeechToTextEventUseCase.kt

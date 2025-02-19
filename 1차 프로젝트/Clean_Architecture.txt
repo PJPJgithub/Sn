@@ -1,0 +1,80 @@
+Design Guideline
+
+[Use Clean Architecture]
+
+In other documents, the names are used as UI, domain, data to describe the Clean Architecture or MVVM design pattern but according to the GM's terminology, we will use names as App, domain, data.
+
+You MUST design and implement the application with below technologies.
+
+- Use Android Databinding
+- Use Android Hilt for Dependency Injection
+	If you are familiar with other library such as Dagger2, you can use it instead of Hilt.
+
+- Use Kotlin Flow to send/receive/collect a data with Kotlin coroutine.
+	If you are familiar with other technology like RxJava, you can use it.
+
+The Application Must have 3 kinds of modules(app, domain, data).
+
+[App Module]
+This is built as com.android.application and contains belows
+- Activity
+- Fragment
+- ViewModel
+Activity is binding with layout XML by Android DataBinding. Fragment is binding with layout XML by Android DataBinding. ViewModel is injected into Activity or Fragment by Hilt.
+
+ViewModel can have some usecase class in the Model module.
+
+[Domain Module]
+This is built as java-library and contains belows
+
+- Entity
+- Usecase
+- Gateway(same as Repository)
+
+[Data Module]
+This is built as com.android.library and contains belows.
+
+- Submodule which has Hilt @Module decorator
+- Datasource like implementation of Gateway in the Model module
+- Service
+- Protobuf implementation
+- Any other business logic implementation.
+
+디자인 가이드라인
+
+[클린 아키텍처 사용]
+다른 문서에서는 클린 아키텍처 또는 MVVM 디자인 패턴을 설명할 때 UI, 도메인, 데이터라는 이름을 사용하지만, GM의 용어에 따라 App, Domain, Data라는 이름을 사용합니다.
+
+아래 기술을 사용하여 애플리케이션을 설계하고 구현해야 합니다.
+
+- Android Databinding 사용
+- 의존성 주입을 위해 Android Hilt 사용
+	다른 라이브러리(Dagger2 등)에 익숙하다면 Hilt 대신 사용할 수 있습니다.
+- Kotlin Flow를 사용하여 Kotlin 코루틴으로 데이터를 송수신 및 수집
+	다른 기술(RxJava 등)에 익숙하다면 사용할 수 있습니다.
+- 애플리케이션은 세 가지 모듈(App, Domain, Data)로 구성되어야 합니다.
+
+[App 모듈]
+이 모듈은 com.android.application으로 빌드되며 다음을 포함합니다:
+- Activity
+- Fragment
+- ViewModel
+Activity는 Android DataBinding을 통해 레이아웃 XML과 바인딩됩니다. Fragment도 마찬가지로 Android DataBinding을 통해 레이아웃 XML과 바인딩됩니다. ViewModel은 Hilt를 통해 Activity 또는 Fragment에 주입됩니다.
+
+ViewModel은 Model 모듈에 있는 일부 Usecase 클래스를 가질 수 있습니다.
+
+[Domain 모듈]
+이 모듈은 java-library로 빌드되며 다음을 포함합니다:
+
+- Entity
+- Usecase
+- Gateway(Repository와 동일)
+
+[Data 모듈]
+이 모듈은 com.android.library로 빌드되며 다음을 포함합니다:
+
+- Hilt @Module 데코레이터가 있는 서브모듈
+- Model 모듈에서 Gateway 구현과 같은 데이터 소스
+- Service
+- Protobuf 구현
+- 기타 비즈니스 로직 구현

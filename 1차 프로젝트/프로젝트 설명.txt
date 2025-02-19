@@ -1,0 +1,49 @@
+fork-> sync
+announce 메일 : gm메일로 설정
+서비스나 프로토콜은 옵션으로 무시
+
+presentation-application : UI
+model-domain : 
+domain-data : 
+
+clean architecture 이유 : 변경 수월, 테스트 수월
+
+entities : time definition
+usecases : 동작에 대한 정의
+
+view, view model - android site 참고
+
+activity : UI구성
+view model : UI 데이터 제공
+
+
+domain 부분에는 인터페이스만 들어가게 됨(클래스의 funtion의 타임만 정의 실제 구현은 안함)
+실제 클래스에서 상속받아 구현
+
+application build : UI
+domain build : 자바라이브러리
+
+1,2개 unit test
+1,2개 introment test
+
+hilt로 dependency관리-코드를 그렇게 안짜도 의존성 주입 가능하게
+
+버튼을 누르고 말을 하면 텍스트를 변환해서 에디트 박스에 나타내줌.
+
+hiilt가 kotli을 jave로 바꿔줌.
+
+fun ,함수이름 ,return값
+
+collect() {
+	파라미터
+}
+
+create()함수
+
+domain에서 flow 흐름 
+flow : straming data 처리 하기 위해
+coroutine : scope처리 메인 쓰레드 말고 다른 쓰레드에서 실행하기 위해.
+
+외부에서 들어올 때 domain flow
+
+외부로 내보낼 때 ui 에서 collect

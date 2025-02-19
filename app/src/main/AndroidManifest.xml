@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (C) GM Global Technology Operations LLC 2024. -->
+<!--All Rights Reserved.-->
+<!--GM Confidential Restricted.-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gm.carcontrolsim">
+
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Snapnews">
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ArticleListActivity" />
+        <activity android:name=".activity.ArticleDetailActivity" />
+
+    </application>
+</manifest>

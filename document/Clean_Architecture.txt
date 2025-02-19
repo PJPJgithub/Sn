@@ -1,0 +1,41 @@
+Design Guideline
+
+[Use Clean Architecture]
+
+In other documents, the names are used as UI, domain, data to describe the Clean Architecture or MVVM design pattern but according to the GM's terminology, we will use names as App, domain, data.
+
+You MUST design and implement the application with below technologies.
+
+- Use Android Databinding
+- Use Android Hilt for Dependency Injection
+	If you are familiar with other library such as Dagger2, you can use it instead of Hilt.
+
+- Use Kotlin Flow to send/receive/collect a data with Kotlin coroutine.
+	If you are familiar with other technology like RxJava, you can use it.
+
+The Application Must have 3 kinds of modules(app, domain, data).
+
+[App Module]
+This is built as com.android.application and contains belows
+- Activity
+- Fragment
+- ViewModel
+Activity is binding with layout XML by Android DataBinding. Fragment is binding with layout XML by Android DataBinding. ViewModel is injected into Activity or Fragment by Hilt.
+
+ViewModel can have some usecase class in the Model module.
+
+[Domain Module]
+This is built as java-library and contains belows
+
+- Entity
+- Usecase
+- Gateway(same as Repository)
+
+[Data Module]
+This is built as com.android.library and contains belows.
+
+- Submodule which has Hilt @Module decorator
+- Datasource like implementation of Gateway in the Model module
+- Service
+- Protobuf implementation
+- Any other business logic implementation.

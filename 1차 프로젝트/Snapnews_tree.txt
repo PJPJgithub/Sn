@@ -1,0 +1,85 @@
+[기존]
+Snapnews
+├─app
+│  ├─activity
+│  │      ArticleDetailActivity.kt
+│  │      ArticleListActivity.kt
+│  │      ArticleListAdapter.kt
+│  │      MainActivity.kt
+│  ├─newsapi
+│  │      NewsApiService.kt
+│  │      NewsResponse.kt
+│  ├─viewmodel
+│  │      MainActivityViewModel.kt
+│  │  SampleApplication.kt
+├─data
+│  ├─permission
+│  │      AndroidPermissionDataSource.kt
+│  │      PermissionDataSource.kt
+│  │      PermissionModule.kt
+│  │      RecordPermissionGatewayImpl.kt
+│  ├─stt
+│  │      AndroidSpeechRecognizer.kt
+│  │      SpeechToTextEngine.kt
+│  │      SpeechToTextGatewayImpl.kt
+│  │      SpeechToTextModule.kt
+├─domain
+│  ├─entity
+│  │      PermissionStatus.kt
+│  │      Response.kt
+│  │      SpeechToTextEvent.kt
+│  ├─gateway
+│  │      RecordPermissionGateway.kt
+│  │      SpeechToTextGateway.kt
+│  ├─usecase
+│  │  ├─permission
+│  │  │      GetRecordPermissionUseCase.kt
+│  │  ├─stt
+│  │  │      GetSpeechToTextEventUseCase.kt
+
+[Clean Architecture]
+Snapnews
+├─app
+│  ├─activity
+│  │      ArticleDetailActivity.kt
+│  │      ArticleListActivity.kt
+│  │      MainActivity.kt
+│  ├─adapter
+│  │      ArticleListAdapter.kt
+│  ├─viewmodel
+│  │      MainActivityViewModel.kt
+│  │  SampleApplication.kt
+├─data
+│  ├─permission
+│  │      AndroidPermissionDataSource.kt
+│  │      PermissionDataSource.kt
+│  │      PermissionModule.kt
+│  │      RecordPermissionGatewayImpl.kt
+│  ├─stt
+│  │      AndroidSpeechRecognizer.kt
+│  │      SpeechToTextEngine.kt
+│  │      SpeechToTextGatewayImpl.kt
+│  │      SpeechToTextModule.kt
+│  ├─news
+│  │      NewsApiService.kt
+│  │      NewsApiModule.kt
+│  │      NewsApiGatewaylmpl.kt
+├─domain
+│  ├─entity
+│  │      PermissionStatus.kt
+│  │      Response.kt
+│  │      SpeechToTextEvent.kt
+│  │      NewsResponse.kt
+│  ├─gateway
+│  │      RecordPermissionGateway.kt
+│  │      SpeechToTextGateway.kt
+│  │      NewsApiGateway.kt
+│  ├─usecase
+│  │  ├─permission
+│  │  │      GetRecordPermissionUseCase.kt
+│  │  ├─stt
+│  │  │      GetSpeechToTextEventUseCase.kt
+│  │  ├─news
+│  │  │      FetchNewsHeadlineUseCase.kt
+│  │  │      ShowNextHeadlineUseCase.kt
+│  │  │      ShowPreviousHeadlineUseCase.kt

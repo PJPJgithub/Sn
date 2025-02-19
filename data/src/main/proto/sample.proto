@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+//package gm.proto.sample;
+
+option java_package = "com.gm.proto";
+option java_multiple_files = true;
+
+
+enum RecordingStatus {
+  IDLE = 0;
+  RECORDING = 1;
+  DONE = 2;
+}
+message UpdateRecordingStatus {
+  RecordingStatus recordingStatus = 1;
+  string voiceText =2;
+}

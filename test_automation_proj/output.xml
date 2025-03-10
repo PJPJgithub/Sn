@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-03-10T16:01:15.629758" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Cases" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases">
+<kw name="Setup Test Environment" type="SETUP">
+<kw name="Check Appium Server" owner="check_appium_server">
+<kw name="Start Appium Server" owner="start_appium_server">
+<msg time="2025-03-10T16:01:16.013656" level="INFO">Appium server error</msg>
+<status status="PASS" start="2025-03-10T16:01:15.980967" elapsed="0.036155"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check" owner="check_appium_server">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-10T16:01:16.018533" level="INFO">Starting process:
+curl http://127.0.0.1:4723/wd/hub/status</msg>
+<msg time="2025-03-10T16:01:16.054083" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-10T16:01:18.341544" level="INFO">Process completed.</msg>
+<msg time="2025-03-10T16:01:18.342582" level="INFO">${result} = &lt;result object with rc 7&gt;</msg>
+<var>${result}</var>
+<arg>curl http://127.0.0.1:4723/wd/hub/status</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-10T16:01:16.018533" elapsed="2.324049"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-10T16:01:18.343594" level="INFO">${output} = </msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-10T16:01:18.342582" elapsed="0.001012"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-03-10T16:01:18.343594" level="FAIL">'' does not contain '"The server is ready to accept new connections"'</msg>
+<arg>${output}</arg>
+<arg>"The server is ready to accept new connections"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-03-10T16:01:18.343594" elapsed="0.000000">'' does not contain '"The server is ready to accept new connections"'</status>
+</kw>
+<status status="FAIL" start="2025-03-10T16:01:16.017122" elapsed="2.327479">'' does not contain '"The server is ready to accept new connections"'</status>
+</kw>
+<kw name="Check" owner="check_appium_server">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-10T16:01:20.345283" level="INFO">Starting process:
+curl http://127.0.0.1:4723/wd/hub/status</msg>
+<msg time="2025-03-10T16:01:20.369700" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-10T16:01:20.625669" level="INFO">Process completed.</msg>
+<msg time="2025-03-10T16:01:20.625669" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>curl http://127.0.0.1:4723/wd/hub/status</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-10T16:01:20.345283" elapsed="0.280386"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-10T16:01:20.626672" level="INFO">${output} = {"value":{"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.16.0","git-sha":"9ef925988b1f9407797e459a8f5d6d27b3f5d27a","built":"2025-02-10 13:35:53 +0900"}}}</msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-10T16:01:20.625669" elapsed="0.001003"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>"The server is ready to accept new connections"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-10T16:01:20.626672" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-10T16:01:20.344763" elapsed="0.281909"/>
+</kw>
+<arg>1 min</arg>
+<arg>2 sec</arg>
+<arg>Check</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-10T16:01:16.017122" elapsed="4.609550"/>
+</kw>
+<status status="PASS" start="2025-03-10T16:01:15.979962" elapsed="4.646710"/>
+</kw>
+<doc>The keywords used inside them are performed before the start of every test case.
+So it's a good idea to put in logic like starting the Appium server.</doc>
+<status status="PASS" start="2025-03-10T16:01:15.979962" elapsed="4.646710"/>
+</kw>
+<suite id="s1-s1" name="Android Tests" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\android_tests">
+<suite id="s1-s1-s1" name="Instrumented Test" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\android_tests\instrumented_test.robot">
+<test id="s1-s1-s1-t1" name="Run Instrumented Test" line="6">
+<kw name="Run Instrumented Test" owner="run_instrumented_test">
+<msg time="2025-03-10T16:02:21.042555" level="INFO">Changed working directory to C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews
+Using gradlew at C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/gradlew
+Gradle connectedAndroidTest execution completed
+Saving results to C:\\Users\\TZ47HH\\AndroidStudioProjects\\Snapnews_project1\\Snapnews\\test_automation_proj\\reports\\instrumented_test_result.txt
+Results saved</msg>
+<status status="PASS" start="2025-03-10T16:01:20.638011" elapsed="60.404544"/>
+</kw>
+<status status="PASS" start="2025-03-10T16:01:20.638011" elapsed="60.404544"/>
+</test>
+<status status="PASS" start="2025-03-10T16:01:20.630283" elapsed="60.413603"/>
+</suite>
+<status status="PASS" start="2025-03-10T16:01:20.626672" elapsed="60.418292"/>
+</suite>
+<kw name="Teardown Test Environment" type="TEARDOWN">
+<kw name="Close Appium Server" owner="close_appium_server">
+<status status="PASS" start="2025-03-10T16:02:21.047478" elapsed="0.270133"/>
+</kw>
+<doc>The keywords used inside them are performed after all test cases are finished.
+Keywords like turn off appium server are good to have in there.</doc>
+<status status="PASS" start="2025-03-10T16:02:21.046277" elapsed="0.272343"/>
+</kw>
+<status status="PASS" start="2025-03-10T16:01:15.646765" elapsed="65.671855"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Cases" id="s1" pass="1" fail="0" skip="0">Test Cases</stat>
+<stat name="Android Tests" id="s1-s1" pass="1" fail="0" skip="0">Test Cases.Android Tests</stat>
+<stat name="Instrumented Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Test Cases.Android Tests.Instrumented Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -104,6 +104,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         mainActivityViewModel.newsHeadline.observe(this) { headline ->
             binding.newsHeadline.text = headline
             textToSpeech.speak(headline, TextToSpeech.QUEUE_FLUSH, null, null)
+            Log.i(TAG, "ttsHeadlineComplete")
         }
 
         mainActivityViewModel.newsImage.observe(this) { imageUrl ->
@@ -121,10 +122,12 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         mainActivityViewModel.newsDescription.observe(this) { description ->
             textToSpeech.speak(description, TextToSpeech.QUEUE_FLUSH, null, null)
+            Log.i(TAG, "ttsDescriptionComplete")
         }
 
         mainActivityViewModel.errordetection.observe(this) { errordetection ->
             textToSpeech.speak(errordetection, TextToSpeech.QUEUE_FLUSH, null, null)
+            Log.i(TAG, "ttsErrorComplete")
         }
 
         mainActivityViewModel.exitApp.observe(this) { shouldExit ->

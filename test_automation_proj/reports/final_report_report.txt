@@ -1,0 +1,2 @@
+Suite 'Senario Test' ended with status: FAIL.
+Suite 'Senario' ended with status: FAIL.

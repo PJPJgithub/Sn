@@ -29,7 +29,6 @@ Evaluate Voice Speed
             Log    Attempt ${j} at speed ${i}
             Press Button    voice_button
             Provide Voice Command    다음    ${i}
-            Sleep    1second
             ${result}    Run Keyword And Return Status    Log check    No more news articles
             Run Keyword If    not ${result}    Exit For Loop
             #Press Button    voice_button

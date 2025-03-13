@@ -1,0 +1,15 @@
+<project2 ppt 목차>
+
+앱 간단 설명
+앱 데모 영상
+
+오토메이션 테스트 설명(robotframework)
+
+코드 전체구조 설명
+OpenCV
+
+android tests
+auto tests
+scenario test
+
+배운점/소감/마무리

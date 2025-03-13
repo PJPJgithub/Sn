@@ -1,0 +1,55 @@
+Suite 'Opencv' started.
+Suite 'Verify Icon Image' started.
+Test 'Verify Icon Image' started.
+  Keyword 'Open Main Activity' started.
+  Keyword 'Open Application' started.
+  Keyword 'Open Application' ended with status: PASS.
+  Keyword 'Open Main Activity' ended with status: PASS.
+  Keyword 'Button Display Test With Opencv' started.
+  Keyword 'Sleep' started.
+  Log: Slept 5 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Verify Buttons Info' started.
+  Keyword 'Element Should Be Visible' started.
+  Log: criteria is prev_button
+  Keyword 'Element Should Be Visible' ended with status: PASS.
+  Keyword 'Element Should Be Visible' started.
+  Log: criteria is next_button
+  Keyword 'Element Should Be Visible' ended with status: PASS.
+  Keyword 'Element Should Be Visible' started.
+  Log: criteria is reset_button
+  Keyword 'Element Should Be Visible' ended with status: PASS.
+  Keyword 'Element Should Be Visible' started.
+  Log: criteria is voice_button
+  Keyword 'Element Should Be Visible' ended with status: PASS.
+  Keyword 'Element Should Be Visible' started.
+  Log: criteria is list_button
+  Keyword 'Element Should Be Visible' ended with status: PASS.
+  Keyword 'Verify Buttons Info' ended with status: PASS.
+  Keyword 'Capture Emulator Screenshot' started.
+  Keyword 'Capture Screenshot' started.
+  Log: The screenshot was successfully captured and saved to C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\resources.
+  Keyword 'Capture Screenshot' ended with status: PASS.
+  Keyword 'Capture Emulator Screenshot' ended with status: PASS.
+  Keyword 'Verify Icons' started.
+  Keyword 'Get Icon List' started.
+  Log: ${icons} = ['left_image.jpg', 'list_image.jpg', 'mike_image.jpg', 'reset_button.jpg', 'right_image.jpg']
+  Keyword 'Get Icon List' ended with status: PASS.
+  Keyword 'Match Icons' started.
+  Log: left_image.jpg, The icon image is the same.
+Matching Score: 0.99
+list_image.jpg, The icon image is the same.
+Matching Score: 0.95
+mike_image.jpg, The icon image is the same.
+Matching Score: 1.00
+reset_button.jpg, The icon image is the same.
+Matching Score: 0.99
+right_image.jpg, The icon image is the same.
+Matching Score: 0.99
+The resized image has been saved to the C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\reports\output\button_match.png.
+  Keyword 'Match Icons' ended with status: PASS.
+  Keyword 'Verify Icons' ended with status: PASS.
+  Keyword 'Button Display Test With Opencv' ended with status: PASS.
+  Keyword 'Close Application' started.
+  Keyword 'Close Application' ended with status: PASS.
+Test 'Verify Icon Image' ended with status: PASS.

@@ -12,7 +12,7 @@ def get_icon_list():
         raise EnvironmentError("The AUTOMATION_HOME environment variable is not set.")
  
     # 아이콘 이미지 디렉토리 경로 설정
-    icon_dir = os.path.join(automation_home, "project", "resources", "icon_image")
+    icon_dir = os.path.join(automation_home, "project", "test_data", "icon_image")
 
     # 아이콘 이미지 파일 리스트 가져오기
     icon_list = [f for f in os.listdir(icon_dir) if f.endswith('.jpg')]

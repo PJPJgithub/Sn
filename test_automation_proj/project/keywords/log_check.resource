@@ -5,6 +5,7 @@ Library    Process
 *** Keywords ***
 Log check
     [Arguments]    ${text}
+    Sleep    2seconds
     Wait Until Keyword Succeeds    10 sec    1 sec    Check    ${text}
 
 Check

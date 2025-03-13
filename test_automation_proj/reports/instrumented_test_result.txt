@@ -164,5 +164,5 @@ Starting 1 tests on 34inch_MY23S_API_32(AVD) - 12
 
 > Task :data:connectedAndroidTest
 
-BUILD SUCCESSFUL in 59s
+BUILD SUCCESSFUL in 29s
 127 actionable tasks: 2 executed, 125 up-to-date

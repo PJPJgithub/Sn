@@ -24,7 +24,7 @@ def match_icons(icon_list):
  
     # 아이콘 리스트를 순회하며 매칭 수행
     for icon_filename in icon_list:
-        icon_image_path = os.path.join(automation_home, "project", "resources", "icon_image", icon_filename)
+        icon_image_path = os.path.join(automation_home, "project", "test_data", "icon_image", icon_filename)
  
         # 아이콘 이미지 로드
         icon_img = cv2.imread(icon_image_path, cv2.IMREAD_UNCHANGED)  # 알파 채널 포함하여 로드
@@ -86,7 +86,7 @@ def match_icons(icon_list):
     cv2.destroyAllWindows()
  
     # 저장할 경로 설정
-    output_dir = os.path.join(automation_home, "project", "resources", "output")
+    output_dir = os.path.join(automation_home, "reports", "output")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
  

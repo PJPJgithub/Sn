@@ -1,0 +1,6 @@
+{
+    "test_case_1": {
+        "input": "sample input",
+        "expected_output": "sample output"
+    }
+}

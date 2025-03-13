@@ -1,119 +1,1299 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-03-10T16:01:15.629758" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.9 on win32)" generated="2025-03-13T02:55:35.722648" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Cases" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases">
 <kw name="Setup Test Environment" type="SETUP">
 <kw name="Check Appium Server" owner="check_appium_server">
 <kw name="Start Appium Server" owner="start_appium_server">
-<msg time="2025-03-10T16:01:16.013656" level="INFO">Appium server error</msg>
-<status status="PASS" start="2025-03-10T16:01:15.980967" elapsed="0.036155"/>
+<msg time="2025-03-13T02:55:36.128657" level="INFO">Appium server error</msg>
+<status status="PASS" start="2025-03-13T02:55:36.092406" elapsed="0.038941"/>
 </kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Check" owner="check_appium_server">
 <kw name="Run Process" owner="Process">
-<msg time="2025-03-10T16:01:16.018533" level="INFO">Starting process:
+<msg time="2025-03-13T02:55:36.132750" level="INFO">Starting process:
 curl http://127.0.0.1:4723/wd/hub/status</msg>
-<msg time="2025-03-10T16:01:16.054083" level="INFO">Waiting for process to complete.</msg>
-<msg time="2025-03-10T16:01:18.341544" level="INFO">Process completed.</msg>
-<msg time="2025-03-10T16:01:18.342582" level="INFO">${result} = &lt;result object with rc 7&gt;</msg>
+<msg time="2025-03-13T02:55:36.172060" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:55:38.955165" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:55:38.956671" level="INFO">${result} = &lt;result object with rc 7&gt;</msg>
 <var>${result}</var>
 <arg>curl http://127.0.0.1:4723/wd/hub/status</arg>
 <arg>shell=True</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2025-03-10T16:01:16.018533" elapsed="2.324049"/>
+<status status="PASS" start="2025-03-13T02:55:36.132750" elapsed="2.823921"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2025-03-10T16:01:18.343594" level="INFO">${output} = </msg>
+<msg time="2025-03-13T02:55:38.957709" level="INFO">${output} = </msg>
 <var>${output}</var>
 <arg>${result.stdout}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2025-03-10T16:01:18.342582" elapsed="0.001012"/>
+<status status="PASS" start="2025-03-13T02:55:38.956671" elapsed="0.001038"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2025-03-10T16:01:18.343594" level="FAIL">'' does not contain '"The server is ready to accept new connections"'</msg>
+<msg time="2025-03-13T02:55:38.957709" level="FAIL">'' does not contain '"The server is ready to accept new connections"'</msg>
 <arg>${output}</arg>
 <arg>"The server is ready to accept new connections"</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2025-03-10T16:01:18.343594" elapsed="0.000000">'' does not contain '"The server is ready to accept new connections"'</status>
+<status status="FAIL" start="2025-03-13T02:55:38.957709" elapsed="0.000000">'' does not contain '"The server is ready to accept new connections"'</status>
 </kw>
-<status status="FAIL" start="2025-03-10T16:01:16.017122" elapsed="2.327479">'' does not contain '"The server is ready to accept new connections"'</status>
+<status status="FAIL" start="2025-03-13T02:55:36.132750" elapsed="2.824959">'' does not contain '"The server is ready to accept new connections"'</status>
 </kw>
 <kw name="Check" owner="check_appium_server">
 <kw name="Run Process" owner="Process">
-<msg time="2025-03-10T16:01:20.345283" level="INFO">Starting process:
+<msg time="2025-03-13T02:55:40.959949" level="INFO">Starting process:
 curl http://127.0.0.1:4723/wd/hub/status</msg>
-<msg time="2025-03-10T16:01:20.369700" level="INFO">Waiting for process to complete.</msg>
-<msg time="2025-03-10T16:01:20.625669" level="INFO">Process completed.</msg>
-<msg time="2025-03-10T16:01:20.625669" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<msg time="2025-03-13T02:55:40.982748" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:55:41.211552" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:55:41.211552" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
 <var>${result}</var>
 <arg>curl http://127.0.0.1:4723/wd/hub/status</arg>
 <arg>shell=True</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2025-03-10T16:01:20.345283" elapsed="0.280386"/>
+<status status="PASS" start="2025-03-13T02:55:40.958875" elapsed="0.252677"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2025-03-10T16:01:20.626672" level="INFO">${output} = {"value":{"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.16.0","git-sha":"9ef925988b1f9407797e459a8f5d6d27b3f5d27a","built":"2025-02-10 13:35:53 +0900"}}}</msg>
+<msg time="2025-03-13T02:55:41.212560" level="INFO">${output} = {"value":{"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.16.2","git-sha":"9ef925988b1f9407797e459a8f5d6d27b3f5d27a","built":"2025-02-10 13:35:53 +0900"}}}</msg>
 <var>${output}</var>
 <arg>${result.stdout}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2025-03-10T16:01:20.625669" elapsed="0.001003"/>
+<status status="PASS" start="2025-03-13T02:55:41.211552" elapsed="0.001008"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${output}</arg>
 <arg>"The server is ready to accept new connections"</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-03-10T16:01:20.626672" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-13T02:55:41.212560" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2025-03-10T16:01:20.344763" elapsed="0.281909"/>
+<status status="PASS" start="2025-03-13T02:55:40.958875" elapsed="0.254685"/>
 </kw>
 <arg>1 min</arg>
 <arg>2 sec</arg>
 <arg>Check</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-03-10T16:01:16.017122" elapsed="4.609550"/>
+<status status="PASS" start="2025-03-13T02:55:36.131347" elapsed="5.082213"/>
 </kw>
-<status status="PASS" start="2025-03-10T16:01:15.979962" elapsed="4.646710"/>
+<status status="PASS" start="2025-03-13T02:55:36.091405" elapsed="5.122155"/>
 </kw>
 <doc>The keywords used inside them are performed before the start of every test case.
 So it's a good idea to put in logic like starting the Appium server.</doc>
-<status status="PASS" start="2025-03-10T16:01:15.979962" elapsed="4.646710"/>
+<status status="PASS" start="2025-03-13T02:55:36.091405" elapsed="5.122155"/>
 </kw>
-<suite id="s1-s1" name="Android Tests" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\android_tests">
-<suite id="s1-s1-s1" name="Instrumented Test" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\android_tests\instrumented_test.robot">
-<test id="s1-s1-s1-t1" name="Run Instrumented Test" line="6">
-<kw name="Run Instrumented Test" owner="run_instrumented_test">
-<msg time="2025-03-10T16:02:21.042555" level="INFO">Changed working directory to C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews
-Using gradlew at C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/gradlew
-Gradle connectedAndroidTest execution completed
-Saving results to C:\\Users\\TZ47HH\\AndroidStudioProjects\\Snapnews_project1\\Snapnews\\test_automation_proj\\reports\\instrumented_test_result.txt
-Results saved</msg>
-<status status="PASS" start="2025-03-10T16:01:20.638011" elapsed="60.404544"/>
+<suite id="s1-s1" name="Senario" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\senario">
+<suite id="s1-s1-s1" name="Senario Test" source="c:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\project\test_cases\senario\senario_test.robot">
+<test id="s1-s1-s1-t1" name="Senario Test" line="10">
+<kw name="Open Main Activity" owner="open_activity">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${appium}[url]</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>app=${app}</arg>
+<arg>appPackage=${package}[package_name]</arg>
+<arg>appActivity=${activity}[activity_name][main]</arg>
+<arg>chromedriverExecutable=${chromedriver_executable}</arg>
+<arg>newCommandTimeout=3000</arg>
+<arg>autoGrantPermissions=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-03-13T02:55:41.275031" elapsed="9.566523"/>
 </kw>
-<status status="PASS" start="2025-03-10T16:01:20.638011" elapsed="60.404544"/>
+<status status="PASS" start="2025-03-13T02:55:41.274018" elapsed="9.567536"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:55:50.993025" level="INFO">Imported existing &lt;module 'comtypes.gen' from 'C:\\venvs\\test-automation-env\\Lib\\site-packages\\comtypes\\gen\\__init__.py'&gt;</msg>
+<msg time="2025-03-13T02:55:50.994323" level="INFO">Using writeable comtypes cache directory: 'C:\venvs\test-automation-env\Lib\site-packages\comtypes\gen'</msg>
+<msg time="2025-03-13T02:55:54.066231" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:55:50.842555" elapsed="3.223676"/>
+</kw>
+<arg>삼성전자 뉴스 알려 줘</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:55:50.842555" elapsed="3.223676"/>
+</kw>
+<kw name="Log check" owner="log_check">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:55:56.068360" level="INFO">Slept 2 seconds.</msg>
+<arg>2seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:55:54.067272" elapsed="2.002168"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:55:56.069440" level="INFO">Starting process:
+adb logcat -d | findstr /c:"News fetched successfully"</msg>
+<msg time="2025-03-13T02:55:56.100105" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:55:57.072852" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:55:57.073850" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:55:56.069440" elapsed="1.004410"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:55:57.074851" level="INFO">${output} = </msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:55:57.073850" elapsed="0.001001"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-03-13T02:55:57.074851" level="FAIL">'' does not contain 'News fetched successfully'</msg>
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-03-13T02:55:57.074851" elapsed="0.001000">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Run Process" owner="Process">
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="NOT RUN" start="2025-03-13T02:55:57.075851" elapsed="0.000000"/>
+</kw>
+<arg>${text}</arg>
+<status status="FAIL" start="2025-03-13T02:55:56.069440" elapsed="1.006411">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:55:58.076179" level="INFO">Starting process:
+adb logcat -d | findstr /c:"News fetched successfully"</msg>
+<msg time="2025-03-13T02:55:58.101532" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:55:59.104682" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:55:59.104682" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:55:58.076179" elapsed="1.028503"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:55:59.106192" level="INFO">${output} = </msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:55:59.104682" elapsed="0.001510"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-03-13T02:55:59.106192" level="FAIL">'' does not contain 'News fetched successfully'</msg>
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-03-13T02:55:59.106192" elapsed="0.000000">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Run Process" owner="Process">
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="NOT RUN" start="2025-03-13T02:55:59.106192" elapsed="0.001215"/>
+</kw>
+<arg>${text}</arg>
+<status status="FAIL" start="2025-03-13T02:55:58.076179" elapsed="1.031228">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:00.107692" level="INFO">Starting process:
+adb logcat -d | findstr /c:"News fetched successfully"</msg>
+<msg time="2025-03-13T02:56:00.135141" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:01.270317" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:56:01.271321" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:00.107692" elapsed="1.163629"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:56:01.271321" level="INFO">${output} = 03-12 10:12:38.608  3413  3413 I MainActivityViewModel: News fetched successfully: ì¼ì±ì ì, ìê³ ìµì´ë¡ âíëì¨ì´ PQCâ íì¬ ë³´ì ì¹© ê°ë°</msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:56:01.271321" elapsed="0.001393"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-13T02:56:01.272714" elapsed="0.000000"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:01.272714" level="INFO">Starting process:
+adb logcat -c</msg>
+<msg time="2025-03-13T02:56:01.304508" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:01.579366" level="INFO">Process completed.</msg>
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:01.272714" elapsed="0.306652"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:00.107692" elapsed="1.471674"/>
+</kw>
+<arg>10 sec</arg>
+<arg>1 sec</arg>
+<arg>Check</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-13T02:55:56.069440" elapsed="5.511432"/>
+</kw>
+<arg>News fetched successfully</arg>
+<status status="PASS" start="2025-03-13T02:55:54.067272" elapsed="7.513600"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:04.582130" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:01.580872" elapsed="3.002307"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:05.583701" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:04.583179" elapsed="1.000522"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:05.585226" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:56:05.734192" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:05.584217" elapsed="0.149975"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:04.583179" elapsed="1.151013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:06.735434" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:05.735213" elapsed="1.000221"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:56:01.580872" elapsed="5.155066"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:56:08.166548" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:56:06.735938" elapsed="1.430610"/>
+</kw>
+<arg>다음</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:56:06.735938" elapsed="1.430610"/>
+</kw>
+<kw name="Log check" owner="log_check">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:10.167711" level="INFO">Slept 2 seconds.</msg>
+<arg>2seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:08.167552" elapsed="2.000159"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:10.168722" level="INFO">Starting process:
+adb logcat -d | findstr /c:"Next news headline"</msg>
+<msg time="2025-03-13T02:56:10.197674" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:10.460272" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:56:10.461449" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.168722" elapsed="0.292727"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:56:10.462459" level="INFO">${output} = 03-12 10:12:47.558  3413  3413 I MainActivityViewModel: Next news headline: â160ê° AI ê¸°ì  íì¬ ìµìì ì¬ì§ êµ¬íââ¦ì¤êµ­ âì¤ì¤ë¯¸ 15 ì¸í¸ë¼âì ì°¨ë³ì± ê°ì¡°</msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.461449" elapsed="0.002009"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.463458" elapsed="0.000000"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:10.463458" level="INFO">Starting process:
+adb logcat -c</msg>
+<msg time="2025-03-13T02:56:10.495818" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:10.754913" level="INFO">Process completed.</msg>
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.463458" elapsed="0.292460"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:10.168722" elapsed="0.587196"/>
+</kw>
+<arg>10 sec</arg>
+<arg>1 sec</arg>
+<arg>Check</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.167711" elapsed="0.588207"/>
+</kw>
+<arg>Next news headline</arg>
+<status status="PASS" start="2025-03-13T02:56:08.167552" elapsed="2.588366"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:13.758261" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:10.756929" elapsed="3.001332"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:14.759348" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:13.759272" elapsed="1.000076"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:14.760361" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:56:14.850315" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:14.759348" elapsed="0.091977"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:13.758261" elapsed="1.093064"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:15.852593" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:14.852323" elapsed="1.000270"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:56:10.756929" elapsed="5.095664"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:56:17.939305" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:56:15.853601" elapsed="2.086823"/>
+</kw>
+<arg>계속 말해 줘</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:56:15.853601" elapsed="2.086823"/>
+</kw>
+<kw name="Wait" owner="wait_seconds">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:29.941689" level="INFO">Slept 12 seconds.</msg>
+<arg>${seconds}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:17.941481" elapsed="12.000208"/>
+</kw>
+<arg>12</arg>
+<status status="PASS" start="2025-03-13T02:56:17.941481" elapsed="12.000208"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:32.943392" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:29.943206" elapsed="3.001192"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:33.945504" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:32.945443" elapsed="1.000061"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:33.946604" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:56:34.047856" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:33.945504" elapsed="0.103351"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:32.944398" elapsed="1.104457"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:35.049575" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:34.048855" elapsed="1.000720"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:56:29.943206" elapsed="5.106369"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:56:36.533263" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:56:35.050081" elapsed="1.483182"/>
+</kw>
+<arg>이전</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:56:35.050081" elapsed="1.483182"/>
+</kw>
+<kw name="Log check" owner="log_check">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:38.535195" level="INFO">Slept 2 seconds.</msg>
+<arg>2seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:36.534412" elapsed="2.000783"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:38.535701" level="INFO">Starting process:
+adb logcat -d | findstr /c:"Previous news headline"</msg>
+<msg time="2025-03-13T02:56:38.563916" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:38.841344" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:56:38.841344" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:38.535701" elapsed="0.306763"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:56:38.843744" level="INFO">${output} = 03-12 10:13:15.869  3413  3413 I MainActivityViewModel: Previous news headline: ì¼ì±ì ì, ìì¤í ë°ëì²´ ê²½ìì§ë¨ ëì</msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:56:38.842464" elapsed="0.001280"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-13T02:56:38.843744" elapsed="0.000000"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:38.844783" level="INFO">Starting process:
+adb logcat -c</msg>
+<msg time="2025-03-13T02:56:38.870832" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:39.132925" level="INFO">Process completed.</msg>
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:38.844783" elapsed="0.289303"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:38.535701" elapsed="0.598385"/>
+</kw>
+<arg>10 sec</arg>
+<arg>1 sec</arg>
+<arg>Check</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-13T02:56:38.535701" elapsed="0.598385"/>
+</kw>
+<arg>Previous news headline</arg>
+<status status="PASS" start="2025-03-13T02:56:36.534412" elapsed="2.599674"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:42.139332" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:39.139094" elapsed="3.000238"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:43.140867" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:42.139332" elapsed="1.001535"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:43.143104" level="INFO">Clicking element 'id=news_image'.</msg>
+<msg time="2025-03-13T02:56:43.227122" level="INFO">criteria is news_image</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:43.140867" elapsed="0.087700"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:42.139332" elapsed="1.089235"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:44.229497" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:43.229073" elapsed="1.000424"/>
+</kw>
+<arg>news_image</arg>
+<status status="PASS" start="2025-03-13T02:56:39.137576" elapsed="5.091921"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:47.231111" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:44.230673" elapsed="3.000438"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:48.232457" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:47.232321" elapsed="1.000136"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:48.233657" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:56:48.341608" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:48.232457" elapsed="0.109151"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:47.231111" elapsed="1.112023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:49.343314" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:48.343134" elapsed="1.000180"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:56:44.229497" elapsed="5.113817"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:52.345072" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:49.343314" elapsed="3.001758"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:53.346516" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:52.345072" elapsed="1.001444"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:56:53.348031" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:56:53.916323" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:56:53.346516" elapsed="0.569807"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:56:52.345072" elapsed="1.571251"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:54.916717" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:53.916323" elapsed="1.000394"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:56:49.343314" elapsed="5.573913"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:56:57.160481" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:56:54.917227" elapsed="2.243254"/>
+</kw>
+<arg>GM 뉴스 알려 줘</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:56:54.917227" elapsed="2.243254"/>
+</kw>
+<kw name="Log check" owner="log_check">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:56:59.160652" level="INFO">Slept 2 seconds.</msg>
+<arg>2seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:56:57.160481" elapsed="2.000171"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:56:59.161821" level="INFO">Starting process:
+adb logcat -d | findstr /c:"News fetched successfully"</msg>
+<msg time="2025-03-13T02:56:59.185146" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:56:59.487462" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:56:59.488462" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:56:59.161821" elapsed="0.326641"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:56:59.488462" level="INFO">${output} = </msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:56:59.488462" elapsed="0.001000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-03-13T02:56:59.489969" level="FAIL">'' does not contain 'News fetched successfully'</msg>
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-03-13T02:56:59.489462" elapsed="0.000507">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Run Process" owner="Process">
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="NOT RUN" start="2025-03-13T02:56:59.489969" elapsed="0.000000"/>
+</kw>
+<arg>${text}</arg>
+<status status="FAIL" start="2025-03-13T02:56:59.160652" elapsed="0.329317">'' does not contain 'News fetched successfully'</status>
+</kw>
+<kw name="Check" owner="log_check">
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:57:00.490690" level="INFO">Starting process:
+adb logcat -d | findstr /c:"News fetched successfully"</msg>
+<msg time="2025-03-13T02:57:00.520707" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:57:00.800218" level="INFO">Process completed.</msg>
+<msg time="2025-03-13T02:57:00.800218" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>adb logcat -d | findstr /c:"${text}"</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:57:00.490690" elapsed="0.309528"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-03-13T02:57:00.801724" level="INFO">${output} = 03-12 10:13:37.866  3413  3413 I MainActivityViewModel: News fetched successfully: AMD is launching its latest Ryzen 9 X3D gaming processors on March 12th</msg>
+<var>${output}</var>
+<arg>${result.stdout}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-03-13T02:57:00.800218" elapsed="0.001506"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${output}</arg>
+<arg>${text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-13T02:57:00.802258" elapsed="0.000000"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-03-13T02:57:00.802258" level="INFO">Starting process:
+adb logcat -c</msg>
+<msg time="2025-03-13T02:57:00.828312" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-03-13T02:57:01.064070" level="INFO">Process completed.</msg>
+<arg>adb logcat -c</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-03-13T02:57:00.802258" elapsed="0.262819"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:00.490183" elapsed="0.574894"/>
+</kw>
+<arg>10 sec</arg>
+<arg>1 sec</arg>
+<arg>Check</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-13T02:56:59.160652" elapsed="1.904425"/>
+</kw>
+<arg>News fetched successfully</arg>
+<status status="PASS" start="2025-03-13T02:56:57.160481" elapsed="3.904596"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:04.066599" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:01.066078" elapsed="3.000521"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:05.068042" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:04.066599" elapsed="1.001443"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:05.069054" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:57:05.180675" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:05.068042" elapsed="0.112633"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:04.066599" elapsed="1.114076"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:06.181944" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:05.180675" elapsed="1.001269"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:57:01.066078" elapsed="5.115866"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:57:07.664433" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:57:06.182949" elapsed="1.482504"/>
+</kw>
+<arg>내용</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:57:06.181944" elapsed="1.483509"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:10.666733" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:07.666452" elapsed="3.000281"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:11.667139" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:10.666733" elapsed="1.000406"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:11.668170" level="INFO">Clicking element 'id=list_button'.</msg>
+<msg time="2025-03-13T02:57:11.741376" level="INFO">criteria is list_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:11.667139" elapsed="0.074237"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:10.666733" elapsed="1.075732"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:12.742667" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:11.742465" elapsed="1.000202"/>
+</kw>
+<arg>list_button</arg>
+<status status="PASS" start="2025-03-13T02:57:07.665453" elapsed="5.077214"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:15.744172" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:12.743676" elapsed="3.000496"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:16.745671" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:15.745179" elapsed="1.000492"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:16.746681" level="INFO">Clicking element 'id=headline_text_view'.</msg>
+<msg time="2025-03-13T02:57:17.509883" level="INFO">criteria is headline_text_view</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:16.745671" elapsed="0.764212"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:15.744172" elapsed="1.765711"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:18.511414" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:17.510917" elapsed="1.000497"/>
+</kw>
+<arg>headline_text_view</arg>
+<status status="PASS" start="2025-03-13T02:57:12.743676" elapsed="5.767738"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:21.512756" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:18.512502" elapsed="3.000254"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:22.514218" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:21.513766" elapsed="1.000959"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:22.515733" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:57:22.603474" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:22.514725" elapsed="0.088749"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:21.512756" elapsed="1.091226"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:23.604338" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:22.603982" elapsed="1.000356"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:57:18.511414" elapsed="5.092924"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:26.605624" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:23.605345" elapsed="3.000279"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:27.607186" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:26.605624" elapsed="1.001562"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:27.608198" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:57:27.688024" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:27.607186" elapsed="0.080838"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:26.605624" elapsed="1.082400"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:28.689178" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:27.689086" elapsed="1.000092"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:57:23.604338" elapsed="5.084840"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:31.690320" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:28.690202" elapsed="3.000118"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:32.691039" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:31.690830" elapsed="1.000209"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:32.692050" level="INFO">Clicking element 'id=reset_button'.</msg>
+<msg time="2025-03-13T02:57:32.776789" level="INFO">criteria is reset_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:32.691039" elapsed="0.085750"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:31.690830" elapsed="1.085959"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:33.778267" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:32.777801" elapsed="1.000466"/>
+</kw>
+<arg>reset_button</arg>
+<status status="PASS" start="2025-03-13T02:57:28.689178" elapsed="5.089089"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:36.779779" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:33.779280" elapsed="3.000499"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:37.781344" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:36.780803" elapsed="1.000541"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:37.782375" level="INFO">Clicking element 'id=next_button'.</msg>
+<msg time="2025-03-13T02:57:38.445699" level="INFO">criteria is next_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:37.781861" elapsed="0.663838"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:36.779779" elapsed="1.665920"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:39.445909" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:38.445699" elapsed="1.000210"/>
+</kw>
+<arg>next_button</arg>
+<status status="PASS" start="2025-03-13T02:57:33.778267" elapsed="5.668164"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:42.448110" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:39.446431" elapsed="3.001679"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:43.449249" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:42.448110" elapsed="1.001139"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:43.450256" level="INFO">Clicking element 'id=prev_button'.</msg>
+<msg time="2025-03-13T02:57:43.521558" level="INFO">criteria is prev_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:43.449249" elapsed="0.072309"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:42.448110" elapsed="1.073448"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:44.522957" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:43.521558" elapsed="1.001399"/>
+</kw>
+<arg>prev_button</arg>
+<status status="PASS" start="2025-03-13T02:57:39.446431" elapsed="5.077039"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:47.524051" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:44.523977" elapsed="3.000074"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:48.524857" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:47.524571" elapsed="1.000286"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:48.525380" level="INFO">Clicking element 'id=list_button'.</msg>
+<msg time="2025-03-13T02:57:48.610195" level="INFO">criteria is list_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:48.525380" elapsed="0.085322"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:47.524571" elapsed="1.086131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:49.610870" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:48.610702" elapsed="1.000674"/>
+</kw>
+<arg>list_button</arg>
+<status status="PASS" start="2025-03-13T02:57:44.523977" elapsed="5.087399"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:52.611940" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:49.611880" elapsed="3.000060"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:53.613060" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:52.612947" elapsed="1.000624"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:53.614585" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:57:53.694920" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:53.613571" elapsed="0.081856"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:52.611940" elapsed="1.083487"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:54.695720" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:53.695427" elapsed="1.000293"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:57:49.611880" elapsed="5.083840"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:57.696828" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:54.696730" elapsed="3.000098"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:57:58.698023" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:57.697891" elapsed="1.000132"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:57:58.699530" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:57:59.264747" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:57:58.698023" elapsed="0.568104"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:57:57.696828" elapsed="1.569299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:00.266436" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:57:59.266127" elapsed="1.000819"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:57:54.696730" elapsed="5.570216"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:58:02.659092" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:58:00.267456" elapsed="2.391636"/>
+</kw>
+<arg>AI 뉴스 알려 줘</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:58:00.267456" elapsed="2.391636"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:05.660661" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:02.660120" elapsed="3.000541"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:06.661592" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:05.661176" elapsed="1.000416"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:58:06.662604" level="INFO">Clicking element 'id=list_button'.</msg>
+<msg time="2025-03-13T02:58:06.745444" level="INFO">criteria is list_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:58:06.661592" elapsed="0.083852"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:58:05.661176" elapsed="1.084268"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:07.747250" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:06.745444" elapsed="1.001806"/>
+</kw>
+<arg>list_button</arg>
+<status status="PASS" start="2025-03-13T02:58:02.660120" elapsed="5.087130"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:10.748972" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:07.747250" elapsed="3.001722"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:11.750134" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:10.748972" elapsed="1.001162"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:58:11.751191" level="INFO">Clicking element 'id=headline_text_view'.</msg>
+<msg time="2025-03-13T02:58:12.460535" level="INFO">criteria is headline_text_view</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:58:11.750134" elapsed="0.710401"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:58:10.748972" elapsed="1.712784"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:13.461896" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:12.461756" elapsed="1.000140"/>
+</kw>
+<arg>headline_text_view</arg>
+<status status="PASS" start="2025-03-13T02:58:07.747250" elapsed="5.715168"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:16.463748" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:13.463479" elapsed="3.000269"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:17.465029" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:16.463748" elapsed="1.001281"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:58:17.466043" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:58:17.560247" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:58:17.465029" elapsed="0.095218"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:58:16.463748" elapsed="1.097594"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:18.561544" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:17.561342" elapsed="1.000202"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:58:13.462418" elapsed="5.099126"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:21.562945" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:18.562649" elapsed="3.000296"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:22.563558" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:21.563455" elapsed="1.000103"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:58:22.564572" level="INFO">Clicking element 'id=back_button'.</msg>
+<msg time="2025-03-13T02:58:22.655104" level="INFO">criteria is back_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:58:22.563558" elapsed="0.091546"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:58:21.563455" elapsed="1.091649"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:23.656731" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:22.655104" elapsed="1.001627"/>
+</kw>
+<arg>back_button</arg>
+<status status="PASS" start="2025-03-13T02:58:18.562649" elapsed="5.094595"/>
+</kw>
+<kw name="Press Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:26.657510" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:23.657244" elapsed="3.000266"/>
+</kw>
+<kw name="Clicking Button" owner="click_button">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:27.658972" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:26.658529" elapsed="1.000443"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-13T02:58:27.659491" level="INFO">Clicking element 'id=voice_button'.</msg>
+<msg time="2025-03-13T02:58:28.228031" level="INFO">criteria is voice_button</msg>
+<arg>id=${button_id}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-13T02:58:27.659491" elapsed="0.569552"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2025-03-13T02:58:26.657510" elapsed="1.571533"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T02:58:29.229546" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T02:58:28.229043" elapsed="1.000503"/>
+</kw>
+<arg>voice_button</arg>
+<status status="PASS" start="2025-03-13T02:58:23.657244" elapsed="5.572812"/>
+</kw>
+<kw name="Provide Voice Command" owner="voice_command">
+<kw name="Generate Voice Command" owner="generate_voice_command">
+<msg time="2025-03-13T02:58:30.765302" level="INFO">Voice command generated successfully.</msg>
+<arg>${text}</arg>
+<arg>${rate}</arg>
+<status status="PASS" start="2025-03-13T02:58:29.230056" elapsed="1.535246"/>
+</kw>
+<arg>종료</arg>
+<arg>${voice_speed}</arg>
+<status status="PASS" start="2025-03-13T02:58:29.230056" elapsed="1.535246"/>
+</kw>
+<doc>Test full senario.</doc>
+<tag>button click tts stt news</tag>
+<status status="PASS" start="2025-03-13T02:55:41.272737" elapsed="169.493594"/>
 </test>
-<status status="PASS" start="2025-03-10T16:01:20.630283" elapsed="60.413603"/>
+<status status="PASS" start="2025-03-13T02:55:41.215832" elapsed="169.551507"/>
 </suite>
-<status status="PASS" start="2025-03-10T16:01:20.626672" elapsed="60.418292"/>
+<status status="PASS" start="2025-03-13T02:55:41.213560" elapsed="169.556287"/>
 </suite>
 <kw name="Teardown Test Environment" type="TEARDOWN">
 <kw name="Close Appium Server" owner="close_appium_server">
-<status status="PASS" start="2025-03-10T16:02:21.047478" elapsed="0.270133"/>
+<status status="PASS" start="2025-03-13T02:58:30.774370" elapsed="0.292702"/>
 </kw>
 <doc>The keywords used inside them are performed after all test cases are finished.
 Keywords like turn off appium server are good to have in there.</doc>
-<status status="PASS" start="2025-03-10T16:02:21.046277" elapsed="0.272343"/>
+<status status="PASS" start="2025-03-13T02:58:30.772859" elapsed="0.294213"/>
 </kw>
-<status status="PASS" start="2025-03-10T16:01:15.646765" elapsed="65.671855"/>
+<status status="PASS" start="2025-03-13T02:55:35.731738" elapsed="175.336576"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">button click tts stt news</stat>
 </tag>
 <suite>
 <stat name="Test Cases" id="s1" pass="1" fail="0" skip="0">Test Cases</stat>
-<stat name="Android Tests" id="s1-s1" pass="1" fail="0" skip="0">Test Cases.Android Tests</stat>
-<stat name="Instrumented Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Test Cases.Android Tests.Instrumented Test</stat>
+<stat name="Senario" id="s1-s1" pass="1" fail="0" skip="0">Test Cases.Senario</stat>
+<stat name="Senario Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Test Cases.Senario.Senario Test</stat>
 </suite>
 </statistics>
 <errors>

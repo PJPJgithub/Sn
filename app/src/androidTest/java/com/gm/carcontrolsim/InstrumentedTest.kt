@@ -10,6 +10,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
+import androidx.test.uiautomator.UiDevice
 import com.gm.carcontrolsim.activity.MainActivity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Assert.assertEquals
@@ -29,6 +30,11 @@ class InstrumentedTest {
     @Rule
     @JvmField
     var activityRule = ActivityTestRule(MainActivity::class.java)
+    // 앱이 실행된 후 특정 좌표를 클릭합니다.
+    private val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+    // 예시 좌표 (x, y)를 클릭합니다. 실제 좌표로 변경하세요.
+    private val x = 893
+    private val y = 297
 
     @Before
     fun setUp() {
@@ -45,6 +51,7 @@ class InstrumentedTest {
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun testTextToSpeechInitialization() {// Text-to-Speech 초기화 테스트
+        device.click(x, y)
         // 이 테스트는 SampleSttActivity가 시작될 때 TextToSpeech 엔진이 올바르게 초기화되고
         // "Welcome" 메시지를 말하는지 확인합니다.
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
@@ -59,6 +66,7 @@ class InstrumentedTest {
 
     @Test
     fun testButtonIsVisible() {// 버튼 가시성 테스트
+        device.click(x, y)
         // 이 테스트는 SampleSttActivity의 주요 버튼들이 화면에 표시되는지 확인합니다.
         onView(withId(R.id.prev_button)).check(matches(isDisplayed()))
         onView(withId(R.id.next_button)).check(matches(isDisplayed()))

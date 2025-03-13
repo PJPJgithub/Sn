@@ -2,11 +2,11 @@
 Library    AppiumLibrary
 Resource   %{AUTOMATION_HOME}/project/keywords/click/click_button.resource
 Resource   %{AUTOMATION_HOME}/project/keywords/open_activity.resource
-Resource   %{AUTOMATION_HOME}/project/keywords/verify/verify_news_image.resource
+Resource   %{AUTOMATION_HOME}/project/keywords/verify/verify_image.resource
 
 *** Test Cases ***
-Click Main Activity button
-    [Documentation]    Launch the application and test button clicks n times
+Verify Icon Image
+    [Documentation]    Launch the application and verify with opencv if icons are well presented.
     Open Main Activity
-    Button Display With Opencv
+    Button Display Test With Opencv
     Close Application

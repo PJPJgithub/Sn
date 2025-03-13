@@ -6,4 +6,4 @@ __all__ = [
     'voice_speed'
 ]
 
-voice_speed = 170
+voice_speed = 160

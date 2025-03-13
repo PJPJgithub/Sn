@@ -13,12 +13,21 @@ def run_instrumented_test():
         os.chdir(project_dir)
         print(f"Changed working directory to {project_dir}")
 
+        #기존에 설치된 앱 제거거
+        subprocess.Popen('adb uninstall com.gm.carcontrolsim', shell=True)
+        
         # gradlew 파일 경로 설정
-        gradlew_path = 'C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/gradlew'
-        print(f"Using gradlew at {gradlew_path}")
+        #gradlew_path = 'C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/gradlew'
+        #print(f"Using gradlew at {gradlew_path}")
+        
+        #앱 제거 후 재설치
+        #subprocess.Popen('adb uninstall com.gm.carcontrolsim', shell=True)
+        #subprocess.Popen('adb install C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/release/GM-CarcontrolSim-0.1.0-release.apk', shell=True)
+        #subprocess.Popen('adb shell pm grant com.gm.carcontrolsim android.permission.RECORD_AUDIO', shell=True)
 
         # Gradle을 사용하여 테스트 실행
-        result = subprocess.run([gradlew_path, 'connectedAndroidTest'], capture_output=True, text=True, shell=True)
+        #result = subprocess.run([gradlew_path, 'connectedAndroidTest'], capture_output=True, text=True, shell=True)
+        result = subprocess.run('gradlew connectedAndroidTest', capture_output=True, text=True, shell=True)
         print("Gradle connectedAndroidTest execution completed")
 
         # 결과 파일 경로 설정

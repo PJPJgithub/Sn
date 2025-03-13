@@ -94,6 +94,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.uiautomator)
     androidTestImplementation(libs.androidx.test.rules)
     //implementation(libs.androidx.recyclerview)
     kapt(libs.hilt.compiler)

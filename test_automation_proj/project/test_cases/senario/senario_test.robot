@@ -5,7 +5,6 @@ Resource   %{AUTOMATION_HOME}/project/keywords/click/click_button.resource
 Resource   %{AUTOMATION_HOME}/project/keywords/log_check.resource
 Resource   %{AUTOMATION_HOME}/project/keywords/tts/voice_command.resource
 Resource   %{AUTOMATION_HOME}/project/keywords/wait_seconds.resource
-Resource    %{AUTOMATION_HOME}/project/keywords/verify/verify_news_image.resource
 Variables  %{AUTOMATION_HOME}/project/variables/voice_speed.py
 *** Test Cases ***
 Senario Test
@@ -55,8 +54,3 @@ Senario Test
 
     Press Button    voice_button
     Provide Voice Command    종료    ${voice_speed}
-
-*** Keywords ***
-#수정필요
-Verify News Image
-    Element Should Be Visible    android=new UiSelector().resourceId("com.gm.carcontrolsim:id/news_image")

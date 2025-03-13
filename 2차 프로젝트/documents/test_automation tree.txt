@@ -1,0 +1,65 @@
+<기존>
+Test automation
+├─doc
+│  ├─asset
+│  │      sample_asset.png
+│  ├─robotframework_chapter02_study.md
+├─project
+│  ├─keywords
+│  │  ├─appium
+│  │  │      close_appium_server.py
+│  │  │      start_appium_server.py
+│  │      open_setting_application.resource
+│  ├─modules
+│  │  ├─robot_listener
+│  │  │      sample_listener.py
+│  ├─resources
+│  │      sample_image.png
+│  ├─test_cases
+│  │  ├─click
+│  │  │      setting_menu_tests.robot
+│  │      __init__.robot
+│  ├─test_data
+│  │  ├─click
+│  │  │      click_setting_main_menu.csv
+│  ├─variables
+│  │      app_info.py
+│  │      appium_setup.py
+│  │      data_loader.py
+│  │      proxy.py
+├─setup
+│  ├─setup-script.ps1
+
+<수정>
+Test automation
+├─doc
+│  ├─asset
+│  │      sample_asset.png
+│  ├─robotframework_chapter02_study.md
+├─project
+│  ├─keywords
+│  │  ├─appium
+│  │  │      close_appium_server.py
+│  │  │      start_appium_server.py
+│  │      open_main_activity.resource
+│  ├─modules
+│  │  ├─robot_listener
+│  │  │      sample_listener.py
+│  ├─resources
+│  │      sample_image.png
+│  ├─test_cases
+│  │  ├─click
+│  │  │      main_activity_btn_tests.robot
+│  │  ├─voice
+│  │  │      stt_test.robot
+│  │      __init__.robot
+│  ├─test_data
+│  │  ├─click
+│  │  │      click_main_button.csv
+│  ├─variables
+│  │      app_info.py
+│  │      appium_setup.py
+│  │      data_loader.py
+│  │      proxy.py
+├─setup
+│  ├─setup-script.ps1

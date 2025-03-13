@@ -7,5 +7,5 @@ Resource   %{AUTOMATION_HOME}/project/keywords/voice_speed/evalute_voice_speed.r
 Find Suitable Voice Speed
     [Documentation]    Launch the application and find suitable voice speed
     Open Main Activity
-    Voice Speed Test    200    100
+    Voice Speed Test    200    120
     Close Application

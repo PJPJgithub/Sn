@@ -1,14 +1,14 @@
 # proxy설정
 $env:HTTP_PROXY="http://koreaproxies.apa.gm.com:80"
 $env:HTTPS_PROXY="http://koreaproxies.apa.gm.com:80"
- 
+ Write-Output "Proxy 설정 완료"
 # 1. C drive에 venvs 폴더 생성하고 그 내부에 test-automation-env 가상환경 생성
 $venvPath = "C:\venvs\test-automation-env"
 if (-Not (Test-Path $venvPath)) {
     New-Item -ItemType Directory -Path "C:\venvs"
     python -m venv $venvPath
 }
- 
+ Write-Output "가상환경 생성 완료"
 # 2. 해당 가상환경 내부에 python 패키지 설치
 $packages = @(
     "robotframework",
@@ -26,13 +26,13 @@ $packages = @(
 foreach ($package in $packages) {
     pip install $package
 }
- 
+ Write-Output "Python 패키지 설치 완료"
 # 설치된 패키지 목록 확인
 #pip list
  
 # 가상환경 비활성화
 & $venvPath\Scripts\deactivate.bat
- 
+ Write-Output "가상환경 비활성화 완료"
  
 # 3. scoop 사용하여 7zip, cmake, ffmpeg 설치
 if (-Not (Get-Command scoop -ErrorAction SilentlyContinue)) {
@@ -40,28 +40,31 @@ if (-Not (Get-Command scoop -ErrorAction SilentlyContinue)) {
     [System.Environment]::SetEnvironmentVariable("Path", "$env:USERPROFILE\scoop\shims;$env:Path", [System.EnvironmentVariableTarget]::User)
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
 }
- 
+ Write-Output "Scoop 설치 완료"
+
 $scoopPackages = @("7zip", "cmake", "ffmpeg")
 foreach ($scoopPackage in $scoopPackages) {
     scoop install $scoopPackage
 }
- 
+ Write-Output "Scoop 패키지 설치 완료"
+
 # 4. nvm 설치
 if (-Not (Get-Command nvm -ErrorAction SilentlyContinue)) {
     Invoke-WebRequest -Uri "https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.zip" -OutFile "$env:TEMP\nvm-setup.zip"
     Expand-Archive -Path "$env:TEMP\nvm-setup.zip" -DestinationPath "$env:TEMP\nvm-setup"
     Start-Process -FilePath "$env:TEMP\nvm-setup\nvm-setup.exe" -Wait
 }
- 
+ Write-Output "NVM 설치 완료"
 # 5. nvm을 통해 v20.17.0 node 설치하고 default 노드로 설정
 nvm install 20.17.0
 nvm use 20.17.0
 #nvm alias default 20.17.0#수정
- 
+ Write-Output "Node.js 설치 및 설정 완료"
 # 6. 해당 노드에 appium와 uiautomator2 설치 (수정)
 npm install -g appium
 npm install -g appium-uiautomator2-driver
- 
+ Write-Output "Appium 및 uiautomator2 설치 완료"
+
 #7. 영구적으로 지정되는 환경변수 설정
 # 관리자 권한으로 실행할 명령어를 스크립트 블록으로 정의
 $scriptBlock = {
@@ -71,13 +74,13 @@ $scriptBlock = {
  
 # 관리자 권한으로 PowerShell 실행
 Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command $scriptBlock" -Verb RunAs
- 
+ Write-Output "환경변수 설정 완료"
 # 8. vscode 설치
 if (-Not (Get-Command code -ErrorAction SilentlyContinue)) {
     Invoke-WebRequest -Uri "https://update.code.visualstudio.com/latest/win32-x64/stable" -OutFile "$env:TEMP\vscode-setup.exe"
     Start-Process -FilePath "$env:TEMP\vscode-setup.exe" -Wait
 }
- 
+ Write-Output "VS Code 설치 완료"
 # 9. vscode에 InternsAutomation 프로파일 생성
 $profileDir = "$env:APPDATA\Code\User"
 $profilePath = "$profileDir\profiles.json"
@@ -127,9 +130,9 @@ foreach ($extension in $extensions) {
     Start-Process "code" -ArgumentList "--install-extension $extension --profile $profileName" -Wait
 }
  
-Write-Output "success"
- 
+Write-Output "VS Code 확장 프로그램 설치 완료"
+
 # 3️⃣ 설치된 확장 프로그램 확인
 Write-Output "extension lists:"
 code --list-extensions --profile $profileName
- 
+ Write-Output "모든 작업 완료"

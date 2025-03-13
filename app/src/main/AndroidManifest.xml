@@ -6,7 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gm.carcontrolsim">
 
-
     <application
         android:name=".SampleApplication"
         android:allowBackup="true"
@@ -27,4 +26,5 @@
         <activity android:name=".activity.ArticleDetailActivity" />
 
     </application>
+
 </manifest>

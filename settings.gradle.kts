@@ -24,3 +24,4 @@ rootProject.name = "CarControlSim"
 include(":app")
 include(":data")
 include(":domain")
+include(":test_automation_proj")

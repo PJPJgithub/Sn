@@ -1,0 +1,10 @@
+Suite 'Android Tests' started.
+Suite 'Instrumented Test' started.
+Test 'Run Instrumented Test' started.
+  Keyword 'Run Instrumented Test' started.
+  Log: Changed working directory to C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews
+Gradle connectedAndroidTest execution completed
+Saving results to C:\\Users\\TZ47HH\\AndroidStudioProjects\\Snapnews_project1\\Snapnews\\test_automation_proj\\reports\\instrumented_test_result.txt
+Results saved
+  Keyword 'Run Instrumented Test' ended with status: PASS.
+Test 'Run Instrumented Test' ended with status: PASS.

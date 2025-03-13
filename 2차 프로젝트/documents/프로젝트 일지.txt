@@ -1,0 +1,21 @@
+3/10
+robot listener code
+add log
+test all test cases with robot listener 
+
+3/11
+[instrumented test automation] 
+code_x,y coordinates click in instrumented.kt
+
+complete automation project
+
+3/12
+make a project ppt
+prepare presentation
+
+3/13
+2nd Project Presentation
+Pull Request on Git
+
+3/14
+2025 SDV Internship Program - Fairwell

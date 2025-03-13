@@ -1,0 +1,5 @@
+In my first project, I wrote unit tests and instrumented tests while developing an app.  I automated them as well.
+An auto test is a test that is hard for humans to do.
+There are two main things I've learned
+I plan to use this opportunity to continue learning about app development and automation testing and develop a career around it.
+I hope to continue to make good connections with team members and other interns.

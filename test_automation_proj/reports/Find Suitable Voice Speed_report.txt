@@ -1,0 +1,1054 @@
+Suite 'Main Activity Btn Click' ended with status: PASS.
+Suite 'Voice Speed Test' started.
+Test 'Find Suitable Voice Speed' started.
+  Keyword 'Open Main Activity' started.
+  Keyword 'Open Application' started.
+  Keyword 'Open Application' ended with status: PASS.
+  Keyword 'Open Main Activity' ended with status: PASS.
+  Keyword 'Voice Speed Test' started.
+  Keyword 'Log' started.
+  Log: Starting Voice Speed Test with range: 200 to 100
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Evaluate Voice Speed' started.
+  Keyword 'Log' started.
+  Log: Evaluating voice speed from 200 to 100
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 5 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Testing speed: 200
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 0 at speed 200
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:40:05.263 10806 10806 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 1 at speed 200
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Log: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Wait Until Keyword Succeeds' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Log check' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Log: ${result} = False
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Exit For Loop' started.
+  Log: Exiting for loop altogether.
+  Keyword 'Exit For Loop' ended with status: PASS.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Testing speed: 190
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 0 at speed 190
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Log: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Wait Until Keyword Succeeds' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Log check' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Log: ${result} = False
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Exit For Loop' started.
+  Log: Exiting for loop altogether.
+  Keyword 'Exit For Loop' ended with status: PASS.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Testing speed: 180
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 0 at speed 180
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 1>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Log: '' does not contain 'No more news articles'
+  Keyword 'Should Contain' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Keyword 'Run Process' started.
+  Keyword 'Run Process' ended with status: NOT RUN.
+  Keyword 'Check' ended with status: FAIL.
+    Error: '' does not contain 'No more news articles'
+  Log: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Wait Until Keyword Succeeds' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Keyword 'Log check' ended with status: FAIL.
+    Error: Keyword 'Check' failed after retrying for 10 seconds. The last error was: '' does not contain 'No more news articles'
+  Log: ${result} = False
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Exit For Loop' started.
+  Log: Exiting for loop altogether.
+  Keyword 'Exit For Loop' ended with status: PASS.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Testing speed: 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 0 at speed 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:41:43.328 11493 11493 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 1 at speed 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:41:52.263 11493 11493 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 2 at speed 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:42:01.369 11493 11493 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 3 at speed 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:42:10.399 11493 11493 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Attempt 4 at speed 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Press Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 3 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Clicking Button' started.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Click Element' started.
+  Log: Clicking element 'id=voice_button'.
+  Log: criteria is voice_button
+  Keyword 'Click Element' ended with status: PASS.
+  Keyword 'Clicking Button' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 1 second.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Press Button' ended with status: PASS.
+  Keyword 'Provide Voice Command' started.
+  Keyword 'Generate Voice Command' started.
+  Log: Voice command generated successfully.
+  Keyword 'Generate Voice Command' ended with status: PASS.
+  Keyword 'Provide Voice Command' ended with status: PASS.
+  Keyword 'Sleep' started.
+  Log: Slept 2 seconds.
+  Keyword 'Sleep' ended with status: PASS.
+  Keyword 'Run Keyword And Return Status' started.
+  Keyword 'Log check' started.
+  Keyword 'Wait Until Keyword Succeeds' started.
+  Keyword 'Check' started.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -d | findstr /c:"No more news articles"
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Log: ${result} = <result object with rc 0>
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Convert To String' started.
+  Log: ${output} = 03-12 08:42:19.313 11493 11493 I MainActivityViewModel: No more news articles
+  Keyword 'Convert To String' ended with status: PASS.
+  Keyword 'Should Contain' started.
+  Keyword 'Should Contain' ended with status: PASS.
+  Keyword 'Run Process' started.
+  Log: Starting process:
+adb logcat -c
+  Log: Waiting for process to complete.
+  Log: Process completed.
+  Keyword 'Run Process' ended with status: PASS.
+  Keyword 'Check' ended with status: PASS.
+  Keyword 'Wait Until Keyword Succeeds' ended with status: PASS.
+  Keyword 'Log check' ended with status: PASS.
+  Log: ${result} = True
+  Keyword 'Run Keyword And Return Status' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Run Keyword If' started.
+  Keyword 'Exit For Loop' started.
+  Log: Exiting for loop altogether.
+  Keyword 'Exit For Loop' ended with status: PASS.
+  Keyword 'Run Keyword If' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Suitable speed determined: 170
+  Keyword 'Log' ended with status: PASS.
+  Log: ${speed} = 170
+  Keyword 'Evaluate Voice Speed' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Suitable voice speed found: 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Write Suitable Speed To File' started.
+  Keyword 'Log' started.
+  Log: Writing suitable speed to file: 170
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Create File' started.
+  Log: Created file '<a href="file://C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\reports\voice_speed_result.txt">C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\reports\voice_speed_result.txt</a>'.
+  Keyword 'Create File' ended with status: PASS.
+  Keyword 'Append To File' started.
+  Log: Appended to file '<a href="file://C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\reports\voice_speed_result.txt">C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj\reports\voice_speed_result.txt</a>'.
+  Keyword 'Append To File' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Suitable speed written to file: C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews\test_automation_proj/reports/voice_speed_result.txt
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Write Suitable Speed To File' ended with status: PASS.
+  Keyword 'Log' started.
+  Log: Voice Speed Test completed
+  Keyword 'Log' ended with status: PASS.
+  Keyword 'Voice Speed Test' ended with status: PASS.
+  Keyword 'Close Application' started.
+  Keyword 'Close Application' ended with status: PASS.
+Test 'Find Suitable Voice Speed' ended with status: PASS.

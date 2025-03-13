@@ -1,0 +1,30 @@
+[개발환경]
+vs code
+robotframework/python
+
+[Plan]
+초기 환경 설정(set-up file)
+automation project_reference code
+appium server start/close 자동화
+main activity button click test
+음성인식 tts->stt->tts 자동화
+
+[Test]
+기능 test(버튼 클릭, Reset, 상세 정보 등)
+음성인식(tts->stt->tts)
+OpenCV_UI Test(기사 이미지, 버튼 이미지, 위치 등)
+
+<시나리오 테스트>
+'GM' 뉴스 알려 줘 
+'다음' 
+'계속' 말해 줘_10초 delay 
+'이전' 
+버튼 클릭(상세 페이지) 
+'테슬라' 뉴스 알려 줘
+'내용'
+목록 -> 상세 페이지
+'초기화'
+'AI' 뉴스 알려 줘
+목록 -> 상세페이지
+버튼 다음, 이전, 초기화 에러 처리
+'종료'

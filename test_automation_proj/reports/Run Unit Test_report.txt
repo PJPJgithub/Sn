@@ -1,0 +1,11 @@
+Suite 'Instrumented Test' ended with status: PASS.
+Suite 'Unit Test' started.
+Test 'Run Unit Test' started.
+  Keyword 'Run Unit Test' started.
+  Log: Changed working directory to C:\Users\TZ47HH\AndroidStudioProjects\Snapnews_project1\Snapnews
+Using gradlew at C:/Users/TZ47HH/AndroidStudioProjects/Snapnews_project1/Snapnews/gradlew
+Gradle test execution completed
+Saving results to C:\\Users\\TZ47HH\\AndroidStudioProjects\\Snapnews_project1\\Snapnews\\test_automation_proj\\reports\\unit_test_result.txt
+Results saved
+  Keyword 'Run Unit Test' ended with status: PASS.
+Test 'Run Unit Test' ended with status: PASS.
